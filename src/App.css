@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+:root {
+  --item-background-color: #1c1f26;
+  --border-color: #383d47;
+  --secondary-border-color: #a8b3cf33;
+  --secondary-color: #a8b3cf;
+  --button-hover-color: #fc538d;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Helvetica,
+    Ubuntu, Segoe UI, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji,
+    Segoe UI Symbol;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-size: 75%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.item-container {
+  display: grid;
+  margin: 20px;
+  grid-template-columns: repeat(auto-fill, 290px);
+  justify-content: space-between;
+  grid-gap: 25px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.item {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 362px;
+  background-color: var(--item-background-color);
+  border: 0.5px solid var(--border-color);
   color: white;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  border-radius: 20px;
+  justify-content: space-around;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.item:hover {
+  border-color: var(--secondary-color);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.item-icon {
+  display: flex;
+  align-self: flex-start;
+  margin-left: 20px;
+  border-radius: 50px;
+  height: 20px;
+}
+
+.item-title {
+  font-size: 16px;
+  background-color: var(--item-background-color);
+  margin: 20px;
+  text-align: left;
+  height: 40px;
+  font-weight: 800;
+}
+
+.item-date-read-time {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  padding-left: 30px;
+  font-size: 12px;
+  color: var(--secondary-color);
+  background-color: var(--item-background-color);
+}
+
+.item-date {
+  background-color: var(--item-background-color);
+}
+
+.item-read-time {
+  background-color: var(--item-background-color);
+}
+.bullet {
+  background-color: var(--item-background-color);
+}
+
+.item-img {
+  width: 90%;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+.item-bottom-row {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: inherit;
+  height: 40px;
+  width: 100%;
+}
+
+.item-button {
+  background-color: inherit;
+}
+
+.item-button:hover {
+  background-color: green;
 }

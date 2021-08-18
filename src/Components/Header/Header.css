@@ -1,0 +1,38 @@
+.header-container {
+  display: flex;
+  flex-direction: row;
+  height: 4em;
+  border-bottom: 0.5px solid var(--secondary-border-color);
+  align-items: center;
+  justify-content: space-between;
+  color: var(--secondary-color);
+  overflow: hidden;
+}
+.header-left {
+  font-size: 2em;
+}
+
+.header-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-between;
+  font-size: 1.5em;
+  font-family: Roboto;
+  line-height: 1.5;
+  font-weight: 800;
+  width: 10%;
+  border: 1px solid red;
+}
+
+.win-epic-prizes {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.win-epic-prizes:hover {
+  color: var(--button-hover-color);
+  cursor: pointer;
+}
